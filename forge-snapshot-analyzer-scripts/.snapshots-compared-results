@@ -1,0 +1,11 @@
+Test Name | Snapshot 1 Gas | Snapshot 2 Gas | Difference
+---------------------------------------------------------
+testFile:testFuzz_one | 95964 | 95964 | 0
+testFile:invariant_one | 0 | 0 | 0
+testFile:testFive | 203164 | 203164 | 0
+testFile:invariant_two | 0 | 0 | 0
+testFile:testTwo | 8827 | 88270 | 79443
+testFile:testOne | 237005 | 237295 | 290
+testFile:testFuzz_two | 95964 | 95964 | 0
+testFile:testThree | 130228 | 130228 | 0
+testFile:testFour | 204291 | 204291 | 0

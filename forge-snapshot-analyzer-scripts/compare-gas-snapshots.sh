@@ -1,7 +1,7 @@
 #!/bin/bash
 
 # Output file name
-OUTPUT_FILE=".snapshot-compare-results"
+OUTPUT_FILE="./forge-snapshot-analyzer-scripts/.snapshots-compared-results"
 
 # Check for correct number of arguments
 if [ "$#" -ne 2 ]; then
@@ -24,13 +24,13 @@ extract_gas() {
     fi
 }
 
-while IFS= read -r line; do
+while IFS= read -r line || [[ -n "$line" ]]; do
     testname=$(echo "$line" | cut -d '(' -f 1 | awk '{$1=$1};1')
     gasvalue=$(extract_gas "$line")
     snapshot1["$testname"]=$gasvalue
 done < "$1"
 
-while IFS= read -r line; do
+while IFS= read -r line || [[ -n "$line" ]]; do
     testname=$(echo "$line" | cut -d '(' -f 1 | awk '{$1=$1};1')
     gasvalue=$(extract_gas "$line")
     snapshot2["$testname"]=$gasvalue
