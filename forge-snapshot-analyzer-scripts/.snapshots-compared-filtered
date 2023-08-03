@@ -1,0 +1,4 @@
+Test Name | Snapshot 1 Gas | Snapshot 2 Gas | Difference
+---------------------------------------------------------
+testFile:testTwo | 8827 | 88270 | 79443
+testFile:testOne | 237005 | 237295 | 290

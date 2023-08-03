@@ -1,5 +1,11 @@
 #!/bin/bash
 
+BOLD="\033[1m"
+RED="\033[1;31m"
+GREEN="\033[1;32m"
+LIGHT_BLUE="\033[1;34m"
+RESET="\033[0m"
+
 # Check for correct number of arguments
 if [ "$#" -ne 1 ]; then
     echo "Usage: $0 <results_file>"
@@ -31,6 +37,15 @@ fi
 # Calculate the percentage
 percentage_saved=$(echo "scale=4; ($total_gas_saved / $total_gas_original) * 100" | bc)
 
-# Display results
-echo "Total Gas Saved: $total_gas_saved"
-echo "Percentage Saved on Original Gas: $percentage_saved%"
+# Decide color based on total_gas_saved
+if [ "$total_gas_saved" -gt 0 ]; then
+    COLOR=$GREEN
+elif [ "$total_gas_saved" -lt 0 ]; then
+    COLOR=$RED
+else
+    COLOR=$LIGHT_BLUE
+fi
+
+# Display results in the chosen color
+echo -e "Total Gas Saved: ${COLOR}$total_gas_saved${RESET}"
+echo -e "Percentage Saved on Snapshot 2 Gas: ${COLOR}$percentage_saved%${RESET}"

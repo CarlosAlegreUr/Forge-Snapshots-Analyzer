@@ -34,5 +34,4 @@ done < "$1"
 # Print the results
 echo "Total for Snapshot 1 Gas: $sum1"
 echo "Total for Snapshot 2 Gas: $sum2"
-echo "Total for Difference: $sum3"
-
+echo "Total Difference: $sum3"
