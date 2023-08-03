@@ -11,15 +11,15 @@ It calculates:
 
 ## Installation 📦
 
-1. Ensure the `install-forge-snapshot-analyzer.sh` is in the same directory as your snapshots.
+1️⃣ Ensure the `install-forge-snapshot-analyzer.sh` is in the same directory as your snapshots.
 
-2. Grant execution permissions:
+2️⃣ Grant execution permissions:
 
    ```bash
    chmod +x install-forge-snapshot-analyzer.sh
    ```
 
-3. Execute the installation script:
+3️⃣ Execute the installation script:
 
    ```bash
    ./install-forge-snapshot-analyzer.sh
@@ -29,11 +29,11 @@ It calculates:
 
 ## Usage 🚀
 
-After installation, you'll find a new bash script `forge-snapshots-analyzer.sh` in your directory with execution permissions pre-set. To get the best out of it:
+After installation, you'll find a new bash script `forge-snapshots-analyzer.sh` in your directory with execution permissions pre-set.
 
-> 📓 **Note**: When executing, make the snapshot of the optimized code be the first argument and the snapshot from the non-optimized the second argument.
+> 📓 **Note**: When executing, make the snapshot of the "optimized" code be the first argument and the snapshot from the non-optimized the second argument.
 
-Execute:
+Execute it with:
 
 ```bash
 ./forge-snapshots-analyzer.sh snapshot-optimized snapshot-non-optimized
@@ -81,7 +81,7 @@ This script checks the output file from `compare-gas-snapshots.sh`. If there's n
 
 #### _**`count-total-gas.sh`**_
 
-It counts and displays the total gas consumption for both snapshots (`snapshot1` and `snapshot2`). It also shows the difference in gas (saved). All this derived from the `filter-out-zero-gas-results` output file.
+It counts and displays the total gas consumption for both snapshots. It also shows the total difference in gas. All this derived from the `filter-out-zero-gas-results` output file.
 
 </details>
 
