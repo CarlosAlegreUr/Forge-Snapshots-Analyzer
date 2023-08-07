@@ -15,17 +15,17 @@ It calculates:
 
 2️⃣ Grant execution permissions:
 
-   ```bash
-   chmod +x install-forge-snapshot-analyzer.sh
-   ```
+```bash
+chmod +x install-forge-snapshot-analyzer.sh
+```
 
 3️⃣ Execute the installation script:
 
-   ```bash
-   ./install-forge-snapshot-analyzer.sh
-   ```
+```bash
+./install-forge-snapshot-analyzer.sh
+```
 
-   ***
+---
 
 ## Usage 🚀
 
@@ -51,6 +51,31 @@ In this repo, there are a few snapshots examples so you can clone the repo and s
 - ⭐ `.gas-snapshot-optimized`: Snapshot with improved gas consumption.
 - ⭐ `.gas-snapshot-bad-opt`: Snapshot where gas consumption did not improve.
 - ⭐ `.gas-snapshot-equal-opt`: Snapshot where individual test consumption changed, but net result was unchanged.
+
+## How are the results displayed? 👓
+
+<details>
+  <summary> Display examples 🖼️ </summary>
+
+---
+
+_**`If code reults in optimization`**_
+
+<img src="images-in-readme/optmized-snapshot.png"/>
+
+---
+
+_**`If code doesn't reult in optimization`**_
+
+<img src="images-in-readme/not-optimized-snapshot.png"/>
+
+---
+
+_**`If code reults in overall zero improvement`**_
+
+<img src="images-in-readme/net-zero-snapshot.png"/>
+
+</details>
 
 ---
 
